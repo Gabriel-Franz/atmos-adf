@@ -5,9 +5,14 @@
 			{
 				"name": "copy_visualcrossing_to_landing",
 				"type": "Copy",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "web_get_apiKey",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -51,7 +56,10 @@
 								"value": "@pipeline().parameters.date",
 								"type": "Expression"
 							},
-							"apiKey": "6RYA3BGGT2Y7XZHB653XG8GEF"
+							"apiKey": {
+								"value": "@activity('web_get_apiKey').output.value",
+								"type": "Expression"
+							}
 						}
 					}
 				],
