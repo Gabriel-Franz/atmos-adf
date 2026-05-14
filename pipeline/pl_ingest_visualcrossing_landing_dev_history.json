@@ -141,7 +141,7 @@
 				"type": "String"
 			},
 			"date_list": {
-				"type": "String"
+				"type": "Array"
 			}
 		},
 		"folder": {
