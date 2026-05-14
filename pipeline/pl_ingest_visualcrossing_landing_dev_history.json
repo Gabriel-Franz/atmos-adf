@@ -110,7 +110,7 @@
 											"type": "Expression"
 										},
 										"date": {
-											"value": "@formatDateTime(addDays(pipeline().parameters.startDate, item(), 'yyyy-MM-dd'))",
+											"value": "@formatDateTime(addDays(pipeline().parameters.startDate, item()), 'yyyy-MM-dd')",
 											"type": "Expression"
 										},
 										"apiKey": {
@@ -130,7 +130,7 @@
 											"type": "Expression"
 										},
 										"date": {
-											"value": "@formatDateTime(addDays(pipeline().parameters.startDate, item(), 'yyyy-MM-dd'))",
+											"value": "@formatDateTime(addDays(pipeline().parameters.startDate, item()), 'yyyy-MM-dd')",
 											"type": "Expression"
 										},
 										"file_name": {
