@@ -16,6 +16,9 @@
 				"type": "string"
 			}
 		},
+		"folder": {
+			"name": "visualcrossing"
+		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
