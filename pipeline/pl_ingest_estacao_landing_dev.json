@@ -1,0 +1,75 @@
+{
+	"name": "pl_ingest_estacao_landing_dev",
+	"properties": {
+		"activities": [
+			{
+				"name": "copy_inmet_to_landing",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "GoogleBigQueryV2Source"
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "ds_bigquery_estacao_src_dev",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ds_csv_inmet_landing_dev",
+						"type": "DatasetReference",
+						"parameters": {
+							"ano": {
+								"value": "@item()",
+								"type": "Expression"
+							},
+							"file_name": {
+								"value": "@toLower(concat('atmos_', pipeline().parameters.id_estacao, '_', string(item()),'_',formatDateTime(utcNow(), 'yyyyMMddHHmmss'), '.csv'))",
+								"type": "Expression"
+							},
+							"id_estacao": {
+								"value": "@pipeline().parameters.id_estacao",
+								"type": "Expression"
+							}
+						}
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "INMET"
+		},
+		"annotations": []
+	}
+}
