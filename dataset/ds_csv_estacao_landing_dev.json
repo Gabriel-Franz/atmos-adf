@@ -5,6 +5,11 @@
 			"referenceName": "ls_adlsg2_atmos_dev",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"file_name": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "INMET"
 		},
