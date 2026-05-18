@@ -1,0 +1,15 @@
+{
+	"name": "ds_bigquery_estacao_src_dev",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_bigquery_inmet",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "INMET"
+		},
+		"annotations": [],
+		"type": "GoogleBigQueryV2Object",
+		"schema": []
+	}
+}
