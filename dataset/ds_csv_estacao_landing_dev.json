@@ -18,8 +18,14 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "@dataset().file_name",
-				"folderPath": "landing/inmet/estacao",
+				"fileName": {
+					"value": "@dataset().file_name",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@toLower(\n    'landing/inmet/estacao'\n)",
+					"type": "Expression"
+				},
 				"fileSystem": "atmos-landing-dev-001"
 			},
 			"columnDelimiter": ",",
