@@ -17,7 +17,10 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation"
+				"type": "AzureBlobFSLocation",
+				"fileName": "@dataset().file_name",
+				"folderPath": "landing/inmet/estacao",
+				"fileSystem": "atmos-landing-dev-001"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
