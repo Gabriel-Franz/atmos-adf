@@ -5,16 +5,15 @@
 			"referenceName": "ls_bigquery_inmet",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"id_estacao": {
-				"type": "int"
-			}
-		},
 		"folder": {
 			"name": "INMET"
 		},
 		"annotations": [],
 		"type": "GoogleBigQueryV2Object",
-		"schema": []
+		"schema": [],
+		"typeProperties": {
+			"dataset": "basedosdados",
+			"table": "br_inmet_bdmep.estacao"
+		}
 	}
 }
