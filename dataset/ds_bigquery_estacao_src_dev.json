@@ -12,8 +12,8 @@
 		"type": "GoogleBigQueryV2Object",
 		"schema": [],
 		"typeProperties": {
-			"dataset": "basedosdados",
-			"table": "br_inmet_bdmep.estacao"
+			"dataset": "",
+			"table": ""
 		}
 	}
 }
