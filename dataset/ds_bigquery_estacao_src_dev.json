@@ -5,6 +5,11 @@
 			"referenceName": "ls_bigquery_inmet",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"id_estacao": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "INMET"
 		},
