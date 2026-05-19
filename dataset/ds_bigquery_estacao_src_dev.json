@@ -10,10 +10,6 @@
 		},
 		"annotations": [],
 		"type": "GoogleBigQueryV2Object",
-		"schema": [],
-		"typeProperties": {
-			"dataset": "",
-			"table": ""
-		}
+		"schema": []
 	}
 }
