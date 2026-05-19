@@ -7,7 +7,7 @@
 		},
 		"parameters": {
 			"id_estacao": {
-				"type": "string"
+				"type": "int"
 			}
 		},
 		"folder": {
