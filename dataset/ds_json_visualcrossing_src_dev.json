@@ -1,6 +1,10 @@
 {
 	"name": "ds_json_visualcrossing_src_dev",
 	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_https_visualcrossing_dev",
+			"type": "LinkedServiceReference"
+		},
 		"parameters": {
 			"city": {
 				"type": "string"
