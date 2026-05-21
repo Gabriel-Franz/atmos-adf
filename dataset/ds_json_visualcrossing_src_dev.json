@@ -1,10 +1,6 @@
 {
 	"name": "ds_json_visualcrossing_src_dev",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "ls_https_visualcrossing_dev",
-			"type": "LinkedServiceReference"
-		},
 		"parameters": {
 			"city": {
 				"type": "string"
@@ -17,7 +13,7 @@
 			}
 		},
 		"folder": {
-			"name": "visualcrossing"
+			"name": "VisualCrossing"
 		},
 		"annotations": [],
 		"type": "Json",
@@ -25,7 +21,7 @@
 			"location": {
 				"type": "HttpServerLocation",
 				"relativeUrl": {
-					"value": "@concat(dataset().city, '/', dataset().date, '?unitGroup=metric&include=day&key=', dataset().apiKey)",
+					"value": "@concat(dataset().city, '/', dataset().date, '?unitGroup=metric&include=days&key=', dataset().apiKey)",
 					"type": "Expression"
 				}
 			}

@@ -17,7 +17,7 @@
 			}
 		},
 		"folder": {
-			"name": "visualcrossing"
+			"name": "VisualCrossing"
 		},
 		"annotations": [],
 		"type": "Json",
@@ -29,7 +29,7 @@
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@ToLower(concat(\n'landing/visualcrossing/',\ndataset().city,\n'/year=', formatDateTime(dataset().date,'yyyy'),\n'/month=', formatDateTime(dataset().date,'MM'),\n'/day=', formatDateTime(dataset().date,'dd')\n))",
+					"value": "@toLower(\nconcat(\n'landing/visualcrossing/',\ndataset().city,\n'/year=', formatDateTime(dataset().date,'yyyy'),\n'/month=', formatDateTime(dataset().date,'MM'),\n'/day=', formatDateTime(dataset().date,'dd')\n)\n)",
 					"type": "Expression"
 				},
 				"fileSystem": "atmos-landing-dev-001"
