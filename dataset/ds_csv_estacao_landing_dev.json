@@ -23,7 +23,7 @@
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@toLower(\n    'landing/inmet/estacao'\n)",
+					"value": "@toLower(\n    'landing/inmet/estacao/'\n)",
 					"type": "Expression"
 				},
 				"fileSystem": "atmos-landing-dev-001"
