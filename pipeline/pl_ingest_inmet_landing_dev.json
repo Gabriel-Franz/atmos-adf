@@ -111,7 +111,17 @@
 							"inputs": [
 								{
 									"referenceName": "ds_bigquery_inmet_src_dev",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"id_estacao": {
+											"value": "@pipeline().parameters.id_estacao",
+											"type": "Expression"
+										},
+										"ano": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
