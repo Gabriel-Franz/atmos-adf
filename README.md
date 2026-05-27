@@ -39,6 +39,33 @@ O projeto tem como objetivo demonstrar a construção de uma pipeline de dados p
 
 ---
 
+# 🖼️ Arquitetura e Componentes
+
+## Resource Group
+
+![Resource Group](images/resource-group.png)
+
+---
+
+## Azure Storage Account
+
+![Storage](images/storage.png)
+
+---
+
+## Azure Key Vault
+
+![Key Vault](images/keyvault.png)
+
+---
+
+## Azure Data Factory Pipeline
+
+![ADF Pipeline](images/adf-pipeline.png)
+
+---
+
+
 # ⚙️ Funcionalidades
 
 - Pipelines automatizadas no Azure Data Factory
