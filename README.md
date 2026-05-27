@@ -15,6 +15,8 @@ O projeto tem como objetivo demonstrar a construção de uma pipeline de dados p
 - Azure Data Factory
 - Azure Storage Account
 - Azure Databricks
+- Azure Key Vault
+- Google BigQuery
 - Apache Spark
 - PySpark
 - Delta Lake
