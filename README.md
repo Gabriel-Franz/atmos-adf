@@ -1,12 +1,14 @@
-# Atmos ADF ☁️
+# Atmos ADF — Azure Data Engineering Pipeline ☁️
 
-Pipeline de Engenharia de Dados desenvolvida utilizando Azure Data Factory para orquestração e ingestão automatizada de dados climáticos em uma arquitetura moderna de dados.
+Pipeline de Engenharia de Dados desenvolvida utilizando Azure Data Factory, Azure Databricks e arquitetura Lakehouse para ingestão, processamento e disponibilização de dados climáticos em ambiente cloud.
 
 ---
 
 # 🚀 Objetivo
 
-O projeto tem como objetivo demonstrar a construção de uma pipeline de dados ponta a ponta utilizando Azure Data Factory para ingestão, movimentação e processamento de dados em ambiente cloud.
+O projeto tem como objetivo construir uma pipeline de dados ponta a ponta utilizando serviços Azure para ingestão automatizada, orquestração, armazenamento e processamento distribuído de dados climáticos provenientes de múltiplas fontes externas.
+
+A solução utiliza Azure Data Factory para orquestração dos pipelines, Azure Storage Account como Data Lake e Azure Databricks para processamento e transformação dos dados utilizando Apache Spark e Delta Lake.
 
 ---
 
@@ -25,19 +27,46 @@ O projeto tem como objetivo demonstrar a construção de uma pipeline de dados p
 
 ---
 
+# 🔄 Fluxo da Pipeline
+
+Visual Crossing API / Google BigQuery
+                ↓
+       Azure Data Factory
+                ↓
+      Azure Storage Account
+                ↓
+       Azure Databricks
+                ↓
+      Camadas Bronze/Silver/Gold
+                ↓
+        Dashboard Analítico
+
+---
+  
 # 📂 Arquitetura do Projeto
 
-## Ingestão de Dados
-- Coleta automatizada de dados climáticos
+## 🔹 Ingestão de Dados
+- Coleta automatizada de dados climáticos através da API Visual Crossing
+- Integração com Google BigQuery para ingestão de datasets adicionais
 - Orquestração utilizando Azure Data Factory
+- Parametrização de pipelines para execução automatizada
 
-## Processamento
-- Transformações utilizando Databricks e Spark
-- Tratamento e padronização dos dados
+## 🔹 Segurança
+- Gerenciamento seguro de credenciais utilizando Azure Key Vault
+- Secrets e chaves de API armazenadas fora do código
 
-## Armazenamento
-- Persistência dos dados em Data Lake
-- Estruturação em camadas analíticas
+## 🔹 Armazenamento
+- Persistência dos dados no Azure Storage Account
+- Estruturação dos dados em Data Lake
+
+## 🔹 Processamento
+- Transformações distribuídas utilizando Azure Databricks e Apache Spark
+- Padronização e tratamento dos dados
+- Escrita das tabelas em formato Delta Lake
+
+## 🔹 Camada Analítica
+- Organização dos dados na arquitetura Medallion (Bronze, Silver e Gold)
+- Criação de tabelas analíticas para consumo e visualização
 
 ---
 
@@ -67,6 +96,20 @@ O projeto tem como objetivo demonstrar a construção de uma pipeline de dados p
 
 ---
 
+# 🧠 Decisões Técnicas
+
+## Azure Data Factory
+Responsável pela orquestração das pipelines e ingestão automatizada dos dados provenientes das fontes externas.
+
+## Azure Key Vault
+Utilizado para armazenamento seguro de secrets e credenciais, evitando exposição de chaves diretamente no código.
+
+## Delta Lake
+Utilizado para garantir confiabilidade, versionamento e melhor performance nas operações de leitura e escrita.
+
+## Medallion Architecture
+Separação das camadas Bronze, Silver e Gold para melhor governança, organização e qualidade dos dados.
+
 
 # ⚙️ Funcionalidades
 
@@ -76,6 +119,16 @@ O projeto tem como objetivo demonstrar a construção de uma pipeline de dados p
 - Processamento distribuído com Spark
 - Armazenamento em Delta Lake
 - Estrutura escalável para projetos de Engenharia de Dados
+- Integração com Google BigQuery
+- Gerenciamento seguro de secrets com Azure Key Vault
+
+---
+
+# 📊 Resultados
+
+O projeto realiza a ingestão e processamento automatizado de dados climáticos provenientes de múltiplas fontes externas, organizando os dados em uma arquitetura Medallion (Bronze, Silver e Gold) para consumo analítico e visualização.
+
+A solução foi construída utilizando serviços Azure focando em escalabilidade, organização e boas práticas de Engenharia de Dados.
 
 ---
 
